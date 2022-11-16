@@ -6,7 +6,7 @@ import (
 	"golang.org/x/exp/slog"
 )
 
-func init() {
+func Init() {
 	opts := slog.HandlerOptions{
 		AddSource:   true,
 		Level:       slog.DebugLevel,

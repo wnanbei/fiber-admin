@@ -1,4 +1,7 @@
-.PHONY: swagger
+.PHONY: swagger buildWin
 
 swagger:
 	swag init -g ./internal/router/router.go --output ./internal/swagger
+
+buildWin:
+	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build cmd/server/main.go

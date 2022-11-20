@@ -1,2 +1,5 @@
 server:
-  port: 9999
+  host: "localhost"
+  port: "9999"
+  basePath: "/"
+  version: "v1.0.0"

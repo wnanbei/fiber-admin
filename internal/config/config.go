@@ -25,7 +25,10 @@ func Init() {
 // SetDefaultConfig 设置默认配置
 func SetDefaultConfig() {
 	// server
+	viper.SetDefault("server.host", "localhost")
 	viper.SetDefault("server.port", "5555")
+	viper.SetDefault("server.basePath", "/")
+	viper.SetDefault("server.version", "v1.0.0")
 
 	// db.mysql
 	viper.SetDefault("db.mysql.username", "root")

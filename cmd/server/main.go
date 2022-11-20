@@ -13,6 +13,5 @@ func main() {
 	config.Init()
 	logger.Init()
 	mysql.Init()
-
 	router.New()
 }

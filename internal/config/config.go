@@ -36,4 +36,7 @@ func SetDefaultConfig() {
 	viper.SetDefault("db.mysql.host", "127.0.0.1")
 	viper.SetDefault("db.mysql.port", "3306")
 	viper.SetDefault("db.mysql.dbname", "")
+
+	// log
+	viper.SetDefault("log.level", 0)
 }

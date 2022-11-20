@@ -4,3 +4,7 @@ server:
   basePath: "/"
   version: "v1.0.0"
   enableSwagger: true
+
+log:
+  level: -4 # debug -4, Info 0, Warn 4, Error 8
+  path: "logs"

@@ -33,13 +33,16 @@ func New() {
 		logger.New(loggerConfig),
 	)
 
-	SetSwagger(app)
-	Router(app)
+	if viper.GetBool("server.enableSwagger") {
+		SetSwagger(app)
+	}
+
+	SetRouter(app)
 
 	app.Listen(":" + viper.GetString("server.port"))
 }
 
-func Router(app *fiber.App) {}
+func SetRouter(app *fiber.App) {}
 
 // SetSwagger 设置 swagger 文档
 func SetSwagger(app *fiber.App) {

@@ -8,6 +8,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/requestid"
 	"github.com/gofiber/swagger"
+	jsoniter "github.com/json-iterator/go"
 	"github.com/spf13/viper"
 	"github.com/wnanbei/fiber-admin/controller/ping"
 	localLogger "github.com/wnanbei/fiber-admin/internal/logger"
@@ -23,7 +24,12 @@ import (
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
 func New() {
-	app := fiber.New()
+	app := fiber.New(
+		fiber.Config{
+			JSONEncoder: jsoniter.ConfigCompatibleWithStandardLibrary.Marshal,
+			JSONDecoder: jsoniter.ConfigCompatibleWithStandardLibrary.Unmarshal,
+		},
+	)
 	setGlobalMiddlewares(app)
 
 	if viper.GetBool("server.enableSwagger") {
@@ -56,7 +62,7 @@ func setGlobalMiddlewares(app *fiber.App) {
 	loggerConfig := logger.Config{
 		Next:         nil,
 		Format:       "[${time}] ${status} - ${latency} ${method} ${path} ${queryParams}\n",
-		TimeFormat:   "15:04:05",
+		TimeFormat:   "2006-01-02 15:04:05",
 		TimeZone:     "Local",
 		TimeInterval: 500 * time.Millisecond,
 		Output:       localLogger.Writer,

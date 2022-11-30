@@ -9,6 +9,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.39.0
 	github.com/gofiber/storage/redis v0.0.0-20221128090226-a21499405c25
 	github.com/gofiber/swagger v0.1.7
+	github.com/json-iterator/go v1.1.12
 	github.com/spf13/viper v1.14.0
 	github.com/swaggo/swag v1.8.7
 	golang.org/x/exp v0.0.0-20221126150942-6ab00d035af9
@@ -44,6 +45,8 @@ require (
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	github.com/mattn/go-runewidth v0.0.14 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
+	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
+	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.5 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect

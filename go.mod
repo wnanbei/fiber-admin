@@ -9,7 +9,7 @@ require (
 	github.com/gofiber/swagger v0.1.7
 	github.com/spf13/viper v1.14.0
 	github.com/swaggo/swag v1.8.7
-	golang.org/x/exp v0.0.0-20221114191408-850992195362
+	golang.org/x/exp v0.0.0-20221126150942-6ab00d035af9
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gorm.io/driver/mysql v1.4.4
 	gorm.io/gorm v1.24.1

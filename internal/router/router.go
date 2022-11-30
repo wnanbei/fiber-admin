@@ -1,7 +1,6 @@
 package router
 
 import (
-	"os"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
@@ -9,6 +8,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/requestid"
 	"github.com/gofiber/swagger"
 	"github.com/spf13/viper"
+	localLogger "github.com/wnanbei/fiber-admin/internal/logger"
 	swag "github.com/wnanbei/fiber-admin/internal/swagger"
 )
 
@@ -26,7 +26,7 @@ func New() {
 		TimeFormat:   "15:04:05",
 		TimeZone:     "Local",
 		TimeInterval: 500 * time.Millisecond,
-		Output:       os.Stdout,
+		Output:       localLogger.Writer,
 	}
 
 	app := fiber.New()

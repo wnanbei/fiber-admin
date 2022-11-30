@@ -9,3 +9,11 @@ server:
 log:
   level: -4 # debug -4, Info 0, Warn 4, Error 8
   path: "logs"
+
+db:
+  mysql:
+    host: "127.0.0.1"
+    port: "3306"
+    username: "root"
+    password: "123456"
+    dbname: ""

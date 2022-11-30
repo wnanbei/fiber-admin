@@ -11,6 +11,7 @@ import (
 	"github.com/spf13/viper"
 	"github.com/wnanbei/fiber-admin/controller/ping"
 	localLogger "github.com/wnanbei/fiber-admin/internal/logger"
+	"github.com/wnanbei/fiber-admin/internal/session"
 	swag "github.com/wnanbei/fiber-admin/internal/swagger"
 )
 
@@ -30,6 +31,8 @@ func New() {
 	}
 
 	setRouter(app)
+
+	session.Init()
 
 	app.Listen(":" + viper.GetString("server.port"))
 }

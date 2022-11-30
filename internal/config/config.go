@@ -37,6 +37,13 @@ func SetDefaultConfig() {
 	viper.SetDefault("db.mysql.port", "3306")
 	viper.SetDefault("db.mysql.dbname", "")
 
+	// db.redis
+	viper.SetDefault("db.redis.username", "")
+	viper.SetDefault("db.redis.password", "")
+	viper.SetDefault("db.redis.host", "127.0.0.1")
+	viper.SetDefault("db.redis.port", "6379")
+	viper.SetDefault("db.redis.database", 0)
+
 	// log debug -4, Info 0, Warn 4, Error 8
 	viper.SetDefault("log.level", 0)
 }

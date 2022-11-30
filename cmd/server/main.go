@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/wnanbei/fiber-admin/internal/config"
 	"github.com/wnanbei/fiber-admin/internal/logger"
-	"github.com/wnanbei/fiber-admin/internal/router"
+	"github.com/wnanbei/fiber-admin/router"
 )
 
 func init() {}

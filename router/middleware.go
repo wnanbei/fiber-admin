@@ -25,7 +25,7 @@ func setGlobalMiddlewares(app *fiber.App) {
 
 	// limiter
 	limiterConfig := limiter.Config{
-		Max:        viper.GetInt("server.limiterMax"),
+		Max:        viper.GetInt("server.globalLimiterMax"),
 		Expiration: 1 * time.Minute,
 		KeyGenerator: func(c *fiber.Ctx) string {
 			return c.IP()

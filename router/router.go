@@ -8,13 +8,13 @@ import (
 	"github.com/wnanbei/fiber-admin/internal/session"
 )
 
-// @title Fiber Example API
-// @description This is a sample swagger for Fiber
-// @termsOfService http://swagger.io/terms/
-// @contact.name API Support
-// @contact.email fiber@swagger.io
-// @license.name Apache 2.0
-// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+//	@title			Fiber Example API
+//	@description	This is a sample swagger for Fiber
+//	@termsOfService	http://swagger.io/terms/
+//	@contact.name	API Support
+//	@contact.email	fiber@swagger.io
+//	@license.name	Apache 2.0
+//	@license.url	http://www.apache.org/licenses/LICENSE-2.0.html
 func New() {
 	app := fiber.New(
 		fiber.Config{

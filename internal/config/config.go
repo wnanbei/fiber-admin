@@ -29,6 +29,7 @@ func SetDefaultConfig() {
 	viper.SetDefault("server.port", "5555")
 	viper.SetDefault("server.basePath", "/")
 	viper.SetDefault("server.version", "v1.0.0")
+	viper.SetDefault("server.globalLimiterMax", 1000)
 
 	// db.mysql
 	viper.SetDefault("db.mysql.username", "root")

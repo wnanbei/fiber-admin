@@ -6,6 +6,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/gofiber/fiber/v2/middleware/requestid"
 	"github.com/gofiber/swagger"
 	"github.com/spf13/viper"
 	swag "github.com/wnanbei/fiber-admin/internal/swagger"
@@ -31,6 +32,7 @@ func New() {
 	app := fiber.New()
 	app.Use(
 		logger.New(loggerConfig),
+		requestid.New(),
 	)
 
 	if viper.GetBool("server.enableSwagger") {
